@@ -1,15 +1,49 @@
+// #spinner-container {
+// 	display: none;
+// }
+// .spinner {
+// 	display: none;
+// 	width: 30px;
+// 	height: 30px;
+// 	border-radius: 50px;
+// 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMMdg5ZO86qkykynlJYqmNgcVkp0lUKQ8sw&usqp=CAU"); /* ajusta la ruta a tu imagen */
+// 	background-size: cover;
+// 	animation: spin 1s linear infinite;
+// 	margin: auto;
+// }
+
+// @keyframes spin {
+// 	0% {
+// 		transform: rotate(0deg);
+// 	}
+// 	100% {
+// 		transform: rotate(360deg);
+// 	}
+// }
 #spinner-container {
 	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+	z-index: 9999; /* Asegura que el spinner esté en la parte superior */
 }
+
 .spinner {
-	display: none;
+	display: block; /* Asegura que el spinner esté visible */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 30px;
 	height: 30px;
 	border-radius: 50px;
-	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMMdg5ZO86qkykynlJYqmNgcVkp0lUKQ8sw&usqp=CAU"); /* ajusta la ruta a tu imagen */
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMMdg5ZO86qkykynlJYqmNgcVkp0lUKQ8sw&usqp=CAU");
 	background-size: cover;
 	animation: spin 1s linear infinite;
-	margin: auto;
+	z-index: 10000; /* Asegura que el spinner esté en la parte superior */
 }
 
 @keyframes spin {

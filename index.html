@@ -8,51 +8,47 @@
 </head>
 <body>
 
-  <nav>
+<nav>
         <div class="nav-data">
             <h1>drinks</h1>
             <h2>¡animate a explorar!</h2>
         </div>
-
         <div class="btn-create"> 
-               <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
+            <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
         </div>
-          
-  </nav>
-<!-- ---------------------------------------------------------------------- -->
-    
+    </nav>
 
-<main class="main-container"  id="main" >
-<!-- formulario barra busqueda -->
-<form id="searchForm">
-    <select id="option" title="b" class="search-box" onchange="filterDrinks()">
-        <option value="buscar">Buscar</option>
-        <option value="name">Nombre</option>
-        <option value="alcoholic">Alcohol</option>
-        <option value="ingredients">ingredientes</option>
+    <main class="main-container"  id="main" >
+        <!-- formulario barra busqueda -->
+        <form id="searchForm">
+            <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+                <option value="buscar">Buscar</option>
+                <option value="name">Nombre</option>
+                <option value="alcoholic">Alcohol</option>
+                <option value="ingredients">ingredientes</option>
+            </select>
+            <input type="text" id="searchInput" class="search-box"  placeholder="Ingrese el nombre del cóctel" />
+            <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
+            <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
+        </form>
+        <!-- fin barra busquedad -->
 
-    </select>
+        <!-- nueva coctelcard -->
+        <div id="nuevaCoctelCard">
+            <form id="coctelForm">
+                <input type="text" id="nameInput" placeholder="Nombre del cóctel">
+                <input type="text" id="preparationInput" placeholder="Preparación">
+                <input type="text" id="imageInput" placeholder="URL de la imagen">
+                <input type="text" id="alcoholInput" placeholder="Contenido de alcohol">
+                <input type="text" id="ingredientsInput" placeholder="Ingredientes (separados por comas)">
+                <button type="submit">Guardar</button>
+                <button type="button" id="cancelarBtn">Cancelar</button>
+            </form>
+        </div>
+        <!-- fin nueva coctel card -->
+        <div class="spinner"></div>
+        <div id="container"></div>
+    </main>
 
-    <input type="text" id="searchInput" class="search-box"  placeholder="Ingrese el nombre del cóctel" />
-     
-    <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
-    <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
-</form>
-
-
-<!-- fin barra busquedad -->
-<div class="spinner"></div>
-
-
-   <div id="container"></div>
-
-</main>
-
-
-
-
-<script src="archivos-js/get.js"></script>
-
-
-</body>
-</html>
+    <script src="archivos-js/get.js"></script>
+    <script src="archivos-js/post.js"></script>

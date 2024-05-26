@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #searchForm {
   text-align: center;
   margin: auto;
@@ -52,6 +53,118 @@
   flex-wrap: wrap;
 }
 
+#nuevaCoctelCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0em auto;
+  display: none;
+}
+
+#coctelForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  color: aliceblue;
+  box-shadow: 3px 3px 15px rgb(245, 6, 137);
+  filter: alpha(opacity=70);
+  padding: 8px;
+  margin: 15px;
+}
+
+#nameInput {
+  height: 2em;
+  border: 1px rgb(230, 24, 168);
+  width: 100%;
+}
+
+#imageInput {
+  height: 2em;
+  border: 1px rgb(230, 24, 168);
+  width: 100%;
+}
+
+#alcoholInput {
+  height: 2em;
+  border: 1px rgb(230, 24, 168);
+  width: 100%;
+}
+
+#ingredientsInput {
+  height: 2em;
+  border: 1px rgb(230, 24, 168);
+  width: 100%;
+}
+
+#preparationInput {
+  height: 9em;
+  width: 100%;
+}
+
+.btn-new {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 30px;
+}
+
+.submit-btn {
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+#cancelarBtn {
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+#cancelarBtn:hover {
+  background: #eebeea;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  color: #f80858;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #6b4f74;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+#spinner-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  z-index: 9999; /* Asegura que el spinner esté en la parte superior */
+}
+
+.spinner {
+  display: block; /* Asegura que el spinner esté visible */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMMdg5ZO86qkykynlJYqmNgcVkp0lUKQ8sw&usqp=CAU");
+  background-size: cover;
+  animation: spin 1s linear infinite;
+  z-index: 10000; /* Asegura que el spinner esté en la parte superior */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 nav {
   background-color: rgb(7, 6, 6);
   color: antiquewhite;
@@ -88,7 +201,7 @@ h2 {
 
 .btn-nav {
   padding: 10px 20px;
-  background-color: var(--color-prymary);
+  background-color: pink;
   border: none;
   border-radius: 10px;
   margin-top: 15px;
