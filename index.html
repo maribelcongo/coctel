@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COCTELES</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-</body></html>
+  <nav>
+        <div class="nav-data">
+            <h1>drinks</h1>
+            <h2>¡animate a explorar!</h2>
+        </div>
+
+        <div class="btn-create"> 
+               <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
+        </div>
+          
+  </nav>
+<!-- ---------------------------------------------------------------------- -->
+    
+
+<main class="main-container"  id="main" >
+<!-- formulario barra busqueda -->
+<form id="searchForm">
+    <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+        <option value="buscar">Buscar</option>
+        <option value="name">Nombre</option>
+        <option value="alcoholic">Alcohol</option>
+        <option value="ingredients">ingredientes</option>
+
+    </select>
+
+    <input type="text" id="searchInput" class="search-box"  placeholder="Ingrese el nombre del cóctel" />
+     
+    <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
+    <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
+</form>
+
+
+<!-- fin barra busquedad -->
+<div class="spinner"></div>
+
+
+   <div id="container"></div>
+
+</main>
+
+
+
+
+<script src="archivos-js/get.js"></script>
+
+
+</body>
+</html>
